@@ -1,0 +1,78 @@
+<odoo>
+<data>
+    <record id="hr_equipment_stage_view_tree" model="ir.ui.view">
+        <field name="name">equipment.stage.tree</field>
+        <field name="model">maintenance.stage</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_stage_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='done']" position="before">
+                <field name="in_progress"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="after">
+                <field name="start_request_datetime"/>
+                <field name="end_request_datetime"/>
+                <field name="real_request_duration" widget="float_time"/>
+                <field name="completion_delay" widget="float_time"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='priority']" position="after">
+                <field name="start_request_datetime_required" invisible="1"/>
+                <field name="end_request_datetime_required" invisible="1"/>
+                <field name="start_request_datetime"
+                       attrs="{'required': [('start_request_datetime_required', '=', True)]}"/>
+                <field name="end_request_datetime"
+                       attrs="{'required': [('end_request_datetime_required', '=', True)]}"/>
+                <label for="real_request_duration" attrs="{'invisible': [('end_request_datetime', '=', False)]}"/>
+                <div attrs="{'invisible': [('end_request_datetime', '=', False)]}">
+                    <field name="real_request_duration" widget="float_time" class="oe_inline"/> <span class="ml8">hours</span>
+                </div>
+                <label for="completion_delay" attrs="{'invisible': [('end_request_datetime', '=', False)]}"/>
+                <div attrs="{'invisible': [('end_request_datetime', '=', False)]}">
+                    <field name="completion_delay" widget="float_time" class="oe_inline"/> <span class="ml8">hours</span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="name">equipment.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <field name="start_request_date"/>
+                <field name="end_request_date"/>
+            </field>
+            <xpath expr="//filter[@name='progress']" position="after">
+                <filter name="progresstoday" string="Started Today"
+                        domain="[('start_request_datetime', '&gt;',
+                        (context_today()-datetime.timedelta(days=1)).strftime('%%Y-%%m-%%d')),
+                        ('start_request_datetime', '&lt;',
+                        (context_today()+datetime.timedelta(days=1)).strftime('%%Y-%%m-%%d'))]"/>
+            </xpath>
+            <xpath expr="//filter[@name='done']" position="after">
+                <filter name="donetoday" string="Done Today"
+                        domain="[('end_request_datetime', '&gt;',
+                        (context_today()-datetime.timedelta(days=1)).strftime('%%Y-%%m-%%d')),
+                        ('end_request_datetime', '&lt;',
+                        (context_today()+datetime.timedelta(days=1)).strftime('%%Y-%%m-%%d'))]"/>
+            </xpath>
+        </field>
+    </record>
+
+</data>
+</odoo>
