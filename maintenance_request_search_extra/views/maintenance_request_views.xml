@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <field name="maintenance_type"/>
+                <field name="request_date"/>
+                <field name="schedule_day"/>
+                <field name="priority"/>
+            </field>
+            <filter name="my_requests" position="after">
+                <separator/>
+                <filter string="Correctives" name="corrective_type" domain="[('maintenance_type', '=', 'corrective')]"/>
+                <filter string="Preventives" name="preventive_type" domain="[('maintenance_type', '=', 'preventive')]"/>
+            </filter>
+            <filter name="top_priority" position="after">
+                <filter string="Normal Priorities" name="normal_priority" domain="[('priority', '=', '2')]"/>
+                <filter string="Low or Very Low Priorities" name="low_very_low_priority" domain="['|', ('priority', 'in', ['0', '1']), ('priority', '=', False)]"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>
