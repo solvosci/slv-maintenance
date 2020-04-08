@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_request_ifs_check
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-08 12:05+0000\n"
+"PO-Revision-Date: 2020-04-08 12:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model.fields,field_description:maintenance_request_ifs_check.field_maintenance_request__ifs_check_cleaning_area
+msgid "Cleaning the area"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model.fields,field_description:maintenance_request_ifs_check.field_maintenance_request__ifs_check_collected_location
+msgid "Collected location"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model_terms:ir.ui.view,arch_db:maintenance_request_ifs_check.hr_equipment_request_view_form
+msgid "Description"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model.fields,field_description:maintenance_request_ifs_check.field_maintenance_request__ifs_check_repaired_correctly
+msgid "Equipment repaired correctly"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model.fields,field_description:maintenance_request_ifs_check.field_maintenance_request__ifs_check_free_strange_elements
+msgid "Free strange elements"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model.fields,field_description:maintenance_request_ifs_check.field_maintenance_request__ifs_checked
+#: model:ir.model.fields,field_description:maintenance_request_ifs_check.field_maintenance_stage__ifs_checked
+#: model_terms:ir.ui.view,arch_db:maintenance_request_ifs_check.hr_equipment_request_view_search
+msgid "IFS checked"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model_terms:ir.ui.view,arch_db:maintenance_request_ifs_check.hr_equipment_request_view_form
+msgid "IFS checks"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model_terms:ir.ui.view,arch_db:maintenance_request_ifs_check.hr_equipment_request_view_form
+msgid "Internal Note ......."
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: code:addons/maintenance_request_ifs_check/models/maintenance.py:39
+#, python-format
+msgid "It can´t be IFS check stage without checked all IFS checks"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model,name:maintenance_request_ifs_check.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: maintenance_request_ifs_check
+#: model:ir.model,name:maintenance_request_ifs_check.model_maintenance_stage
+msgid "Maintenance Stage"
+msgstr ""
+
