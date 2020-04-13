@@ -1,0 +1,72 @@
+<odoo>
+<data>
+    <!-- New tree view: stages - added in_progress boolean -->
+    <record id="hr_equipment_stage_view_tree" model="ir.ui.view">
+        <field name="name">equipment.stage.tree</field>
+        <field name="model">maintenance.stage</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_stage_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='done']" position="after">
+                <field name="ifs_checked"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- New tree view: MaintenanceRequest - added ifs_checked -->
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field name="name">equipment.request.tree</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="after">
+                <field name="ifs_checked" invisible="1"/>
+            </xpath>
+            <xpath expr="//tree" position="attributes">
+                <attribute name='decoration-success'>ifs_checked</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- New form view: MaintenanceRequest - added new IFS checks -->
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="replace">
+                <notebook>
+                    <page name="page_description" string="Description">
+                        <field name="description" placeholder="Internal Note ......."/>
+                    </page>
+                    <page name="page_ifs_checks" string="IFS checks">
+                        <group>
+                            <group>
+                                <field name="ifs_check_repaired_correctly"/>
+                                <field name="ifs_check_free_strange_elements"/>
+                            </group>
+                            <group>
+                                <field name="ifs_check_collected_location"/>
+                                <field name="ifs_check_cleaning_area"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- New search view: MaintenanceRequest - added ifs_checked -->
+    <record id="hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="name">equipment.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="sequence" eval="16"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='top_priority']" position="before">
+                <filter name="ifs_checked" string="IFS checked"
+                        domain="[('ifs_checked', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>
