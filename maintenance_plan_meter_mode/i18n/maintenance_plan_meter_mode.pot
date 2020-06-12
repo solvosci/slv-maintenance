@@ -1,0 +1,134 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_plan_meter_mode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-13 10:11+0000\n"
+"PO-Revision-Date: 2020-09-13 10:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_mode
+msgid "Auto incremental mode"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: code:addons/maintenance_plan_meter_mode/models/maintenance.py:97
+#, python-format
+msgid "Cannot set auto incremental Meter mode without Value to self-increase per day"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_meter_mode.maintenance_plan_view_search
+msgid "Classic Plans"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:maintenance.kind,name:maintenance_plan_meter_mode.maintenance_kind_consumption
+msgid "Consumption"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_current_value
+msgid "Current value"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_lastupdate
+msgid "Date of last revision"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:maintenance.kind,name:maintenance_plan_meter_mode.maintenance_kind_every_x_copies
+msgid "Every X copies"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,help:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_mode
+msgid "If checked, Current value is periodically incremented according a self-increase value; otherwise only manual changes of Current value are allowed"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,help:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_maxvalue
+msgid "Increment since the last revision to generate another request"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_maxvalue
+msgid "Interval between requests"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: code:addons/maintenance_plan_meter_mode/models/maintenance.py:101
+#, python-format
+msgid "It can´t be Meter mode without Maximum amount since the last revision"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model,name:maintenance_plan_meter_mode.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model,name:maintenance_plan_meter_mode.model_maintenance_plan
+msgid "Maintenance Plan"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_equipment__maintenance_meter_mode_plan_ids
+msgid "Maintenance meter mode plan"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_meter_mode.hr_equipment_view_form
+msgid "Meter Mode Plans"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_mode
+msgid "Meter mode"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_meter_mode.hr_equipment_view_form
+msgid "Meter mode Plans"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_meter_mode.maintenance_plan_view_search
+msgid "Meter Mode Plans"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,help:maintenance_plan_meter_mode.field_maintenance_plan__meter_current_value
+msgid "This field can be updated manually or daily adding a value defined."
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_unit
+msgid "Unit of Value to self-increase per day"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,help:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_lastvalue
+msgid "Value from which the last revision was made"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_lastvalue
+msgid "Value of last revision"
+msgstr ""
+
+#. module: maintenance_plan_meter_mode
+#: model:ir.model.fields,field_description:maintenance_plan_meter_mode.field_maintenance_plan__meter_autoinc_value
+msgid "Value to self-increase per day"
+msgstr ""
+
