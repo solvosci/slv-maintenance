@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--  Maintenance kinds -->
+        <record id="maintenance_kind_every_x_copies" model="maintenance.kind">
+            <field name="name">Every X copies</field>
+            <field name="active" eval="True" />
+        </record>
+        <record id="maintenance_kind_consumption" model="maintenance.kind">
+            <field name="name">Consumption</field>
+            <field name="active" eval="True" />
+        </record>
+
+        <!--  Maintenance plans -->
+        <record id="maintenance_plan_every_1000_copies_printer1" model="maintenance.plan">
+            <field name="name">Every 1,000 copies</field>
+            <field name="equipment_id" ref="maintenance.equipment_printer1" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_every_x_copies" />
+            <field name="meter_mode" eval="True"/>
+            <field name="meter_autoinc_mode" eval="True"/>
+            <field name="meter_autoinc_value">50</field>
+            <field name="meter_autoinc_unit" ref="uom.product_uom_unit"/>
+            <field name="meter_autoinc_maxvalue">1000</field>
+        </record>
+        <record id="maintenance_plan_catridge_consumption_printer1" model="maintenance.plan">
+            <field name="name">Catridge consuption revision</field>
+            <field name="equipment_id" ref="maintenance.equipment_printer1" />
+            <field name="maintenance_kind_id" ref="maintenance_kind_consumption" />
+            <field name="meter_mode" eval="True"/>
+            <field name="meter_autoinc_mode" eval="False"/>
+            <field name="meter_autoinc_maxvalue">500</field>
+        </record>
+
+    </data>
+</odoo>
