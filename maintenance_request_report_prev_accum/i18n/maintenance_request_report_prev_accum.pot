@@ -1,0 +1,212 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_request_report_prev_accum
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-16 15:24+0000\n"
+"PO-Revision-Date: 2021-07-16 15:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:49
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__requests_done_pct
+#, python-format
+msgid "% Done"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__requests_done_not_late_pct
+msgid "% Done not late"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:50
+#, python-format
+msgid "% Not late"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:56
+#, python-format
+msgid "ALL"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:43
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__company_id
+#, python-format
+msgid "Company"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__create_uid
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__create_uid
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__create_date
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__create_date
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__display_name
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__display_name
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request__done_late
+msgid "Done Late"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__date_to
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__date_to
+msgid "End Date"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model_terms:ir.ui.view,arch_db:maintenance_request_report_prev_accum.report_prev_accum_wizard
+msgid "Export"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:44
+#, python-format
+msgid "From"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__id
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__id
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,help:maintenance_request_report_prev_accum.field_maintenance_request__done_late
+msgid "Indicates if request, if done, was finished after the next planned one"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard____last_update
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a____last_update
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__write_uid
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__write_uid
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__write_date
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__write_date
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a_report_xlsx__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model,name:maintenance_request_report_prev_accum.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model,name:maintenance_request_report_prev_accum.model_maintenance_request_p_a_report_wizard
+msgid "Maintenance Request Preventive Accumulated Report Wizard"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.actions.report,name:maintenance_request_report_prev_accum.action_report_prev_accum_xlsx
+msgid "Maintenance Request Preventive Accumulated XLSX"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:47
+#, python-format
+msgid "Not late"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model_terms:ir.ui.view,arch_db:maintenance_request_report_prev_accum.report_prev_accum_wizard
+msgid "Please select a date range for the requested report.<br/>\n"
+"                    Both dates will be included in the search:"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.actions.act_window,name:maintenance_request_report_prev_accum.action_report_prev_accum_wizard
+#: model:ir.ui.menu,name:maintenance_request_report_prev_accum.maintenance_request_report_prev_accum
+msgid "Preventive Accumulated Report"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:46
+#, python-format
+msgid "Req. Done"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:40
+#, python-format
+msgid "Requests Accumulative Summary"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__requests_done
+msgid "Requests Done"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__requests_done_not_late
+msgid "Requests Done Not Late"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__requests_scheduled
+msgid "Requests Scheduled"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:48
+#, python-format
+msgid "Scheduled"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_maintenance_request_p_a_report_wizard__date_from
+#: model:ir.model.fields,field_description:maintenance_request_report_prev_accum.field_report_maintenance_request_p_a__date_from
+msgid "Start Date"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: code:addons/maintenance_request_report_prev_accum/report/report_maintenance_request_prev_accum_xlsx.py:45
+#, python-format
+msgid "To"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model,name:maintenance_request_report_prev_accum.model_report_maintenance_request_p_a_report_xlsx
+msgid "report.maintenance_request_p_a_report_xlsx"
+msgstr ""
+
+#. module: maintenance_request_report_prev_accum
+#: model:ir.model,name:maintenance_request_report_prev_accum.model_report_maintenance_request_p_a
+msgid "report_maintenance_request_p_a"
+msgstr ""
+
