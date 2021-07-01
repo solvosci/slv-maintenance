@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_prev_accum_wizard" model="ir.ui.view">
+        <field name="name">Preventive Accumulated Report</field>
+        <field name="model">maintenance.request.p_a.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <p>
+                    Please select a date range for the requested report.<br/>
+                    Both dates will be included in the search:
+                </p>
+                <group name="date_range">
+                    <group>
+                        <field name="date_from"/>
+                    </group>
+                    <group>
+                        <field name="date_to"/>
+                    </group>
+                </group>
+                <footer>
+                    <button
+                        name="button_export_xlsx"
+                        string="Export"
+                        type="object"
+                        class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>  
+
+   <act_window id="action_report_prev_accum_wizard"
+        name="Preventive Accumulated Report"
+        res_model="maintenance.request.p_a.report.wizard"
+        view_type="form"
+        view_mode="form"
+        view_id="report_prev_accum_wizard"
+        target="new" />
+
+    <menuitem
+        id="maintenance_request_report_prev_accum"
+        action="action_report_prev_accum_wizard"
+        parent="maintenance.maintenance_reporting"
+        sequence="10"/>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_prev_accum_xlsx" model="ir.actions.report">    
+        <field name="name">Maintenance Request Preventive Accumulated XLSX</field>
+        <field name="model">report_maintenance_request_p_a</field>
+        <field name="type">ir.actions.report</field>
+        <field name="report_name">maintenance_request_p_a_report_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">maintenance_request_prev_accum</field>
+    </record>
+
+</odoo>
