@@ -7,7 +7,7 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Maintenance",
     "website": "https://github.com/solvosci/slv-maintenance",
     "depends": [
