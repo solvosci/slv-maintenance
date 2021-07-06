@@ -11,7 +11,7 @@
             <field name="subject">Maintenance Request Created (Ref ${object.name or 'n/a' })</field>
             <field name="partner_to">${ctx.get('user_notify_id')}</field>
             <field name="auto_delete" eval="False"/>
-            <field name="lang">${object.owner_user_id.lang}</field>
+            <field name="lang">${user.lang}</field>
             <field name="body_html" type="html">
                 <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; padding-bottom:16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;"><tr><td align="center">
                     <table border="0" cellpadding="0" cellspacing="0" width="590" style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;">
@@ -42,8 +42,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
                                         <tr><td valign="top" style="font-size: 13px;">
                                             <div>
-                                                <p>Hello ${object.owner_user_id.name},</p>
-                                                <p>The request ${object.name or 'n/a'} has been created.</p>
+                                                <p>Hello,</p>
+                                                <p>The request ${object.name or 'n/a'} of ${object.equipment_id.name} equipment has been created.</p>
                                                 Thank you,<br/><br/>
                                                 ${user.signature | safe}<br/>
                                             </div>
@@ -90,7 +90,7 @@
             <field name="subject">Maintenance Request Closed (Ref ${object.name or 'n/a' })</field>
             <field name="partner_to">${ctx.get('user_notify_id')}</field>
             <field name="auto_delete" eval="False"/>
-            <field name="lang">${object.owner_user_id.lang}</field>
+            <field name="lang">${user.lang}</field>
             <field name="body_html" type="html">
                 <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; padding-bottom:16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;"><tr><td align="center">
                     <table border="0" cellpadding="0" cellspacing="0" width="590" style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;">
@@ -119,8 +119,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
                                         <tr><td valign="top" style="font-size: 13px;">
                                             <div>
-                                                <p>Hello ${object.owner_user_id.name or ''},</p>
-                                                <p>The request ${object.name or 'n/a'} has been closed.</p>
+                                                <p>Hello,</p>
+                                                <p>The request ${object.name or 'n/a'} of ${object.equipment_id.name} equipment has been closed.</p>
                                                 
                                                 Thank you,<br/><br/>
                                                 ${user.signature | safe}<br/>
