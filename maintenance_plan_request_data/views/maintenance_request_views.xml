@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="name">equipment.request.search (in maintenance_plan_request_data)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="unscheduled" position="after">
+                <separator/>
+                <filter string="Period &gt; 7 days" domain="[('plan_period', '&gt;', 7)]" name="period_greater_7"/>
+                <filter string="Period &gt; 30 days" domain="[('plan_period', '&gt;', 30)]" name="period_greater_30"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field name="name">equipment.request.tree (in maintenance_plan_request_data)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="stage_id" position="after">
+                <field name="plan_period"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="name">equipment.request.form (in maintenance_plan_request_data)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+            <field name="maintenance_type" position="after">
+                <field name="calc_maintenance_plan_id" groups="base.group_no_one"/>
+                <field name="plan_period"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

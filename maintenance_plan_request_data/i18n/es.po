@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maintenance_plan_request_data
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-06 09:26+0000\n"
+"PO-Revision-Date: 2021-07-06 09:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_plan_request_data
+#: model:ir.model.fields,field_description:maintenance_plan_request_data.field_maintenance_request__calc_maintenance_plan_id
+msgid "Calculated Maintenance Plan"
+msgstr "Plan de mantenimiento calculado"
+
+#. module: maintenance_plan_request_data
+#: model:ir.model.fields,help:maintenance_plan_request_data.field_maintenance_request__plan_period
+msgid "Days between each maintenance"
+msgstr "Días entre cada mantenimiento"
+
+#. module: maintenance_plan_request_data
+#: model:ir.model.fields,help:maintenance_plan_request_data.field_maintenance_request__calc_maintenance_plan_id
+msgid "For preventive requests, obtains the possible related plan, if possible. It's useful for maintenance_plan implementations that have unlinked requests"
+msgstr "Para peticiones de mantenimiento preventivas, obtiene el probable plan relacionado, de ser posible. Es útil para implementaciones de maintenance_plan que no tienen enlazadas las peticiones de mantenimiento"
+
+#. module: maintenance_plan_request_data
+#: model:ir.model,name:maintenance_plan_request_data.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: maintenance_plan_request_data
+#: model:ir.model,name:maintenance_plan_request_data.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Petición de mantenimiento"
+
+#. module: maintenance_plan_request_data
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_request_data.hr_equipment_request_view_search
+msgid "Period > 30 days"
+msgstr "Periodo > 30 días"
+
+#. module: maintenance_plan_request_data
+#: model_terms:ir.ui.view,arch_db:maintenance_plan_request_data.hr_equipment_request_view_search
+msgid "Period > 7 days"
+msgstr "Periodo > 7 días"
+
+#. module: maintenance_plan_request_data
+#: model:ir.model.fields,field_description:maintenance_plan_request_data.field_maintenance_request__plan_period
+msgid "Plan Period"
+msgstr "Periodo del plan"
+
