@@ -1,0 +1,115 @@
+<odoo>
+<data>
+
+    <record id="maintenance_plan_view_search" model="ir.ui.view">
+        <field name="name">maintenance.plan.search</field>
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="under_maintenance" position="after">
+                <separator/>
+                <filter string="Classic Plans" name="plan_classic"
+                        domain="[('meter_mode', '=', False)]"/>
+                <filter string="Meter Mode Plans" name="plan_meter"
+                        domain="[('meter_mode', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="maintenance_plan_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.plan.tree</field>
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="before">
+                <field name="meter_mode"/>
+                <field name="meter_current_value"/>
+                <field name="meter_autoinc_maxvalue"/>
+                <field name="meter_autoinc_lastvalue"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="maintenance_plan_view_form" model="ir.ui.view">
+        <field name="model">maintenance.plan</field>
+        <field name="inherit_id" ref="maintenance_plan.maintenance_plan_view_form"/>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='interval']" position="attributes">
+                <attribute name="attrs">{'readonly': [('meter_mode', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='interval_step']" position="attributes">
+                <attribute name="attrs">{'readonly': [('meter_mode', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='maintenance_plan_horizon']" position="attributes">
+                <attribute name="attrs">{'readonly': [('meter_mode', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='planning_step']" position="attributes">
+                <attribute name="attrs">{'readonly': [('meter_mode', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr='//form/sheet/notebook' position="before">
+                <group name="group_meter_mode">
+                    <group>
+                        <field name="meter_mode"/>
+                        <field name="meter_current_value"
+                               attrs="{'readonly':[('meter_mode', '=', False)]}"/>
+                        <field name="meter_autoinc_mode"
+                               attrs="{'readonly':[('meter_mode', '=', False)]}"/>
+                        <label for="meter_autoinc_value"
+                               attrs="{'invisible':['|',('meter_mode', '=', False),('meter_autoinc_mode', '=', False)]}"/>
+                        <div class="o_row">
+                            <field name="meter_autoinc_value"
+                               attrs="{'required':[('meter_mode', '=', True),('meter_autoinc_mode', '=', True)]
+                               ,'invisible':['|',('meter_mode', '=', False),('meter_autoinc_mode', '=', False)]}"/>
+                            <field name="meter_autoinc_unit"
+                               attrs="{'required':[('meter_mode', '=', True),('meter_autoinc_mode', '=', True)]
+                               ,'invisible':['|',('meter_mode', '=', False),('meter_autoinc_mode', '=', False)]}"/>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="meter_autoinc_maxvalue"
+                               attrs="{'required':[('meter_mode', '=', True)],'readonly':[('meter_mode', '=', False)]}"/>
+                        <field name="meter_autoinc_lastvalue"
+                               attrs="{'readonly':[('meter_mode', '=', False)]}"/>
+                        <field name="meter_autoinc_lastupdate"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- equipment : views inheritance -->
+    <record id="hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form.inherit</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="model">maintenance.equipment</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='planning_step']" position="after">
+                <field name="meter_mode"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Meter Mode Plans">
+                    <group name="maintenance_meter_mode">
+                        <field name="maintenance_meter_mode_plan_ids" nolabel="1"
+                               context="{'default_equipment_id': active_id, 'hide_equipment_id': 1, 'default_meter_mode': True}">
+                            <tree string="Meter mode Plans">
+                                <field name="maintenance_kind_id"/>
+                                <field name="name"/>
+                                <field name="meter_mode" invisible="1"/>
+                                <field name="start_maintenance_date"/>
+                                <field name="next_maintenance_date"/>
+                                <field name="meter_current_value"/>
+                                <field name="meter_autoinc_mode"/>
+                                <field name="meter_autoinc_value"/>
+                                <field name="meter_autoinc_unit"/>
+                                <field name="meter_autoinc_maxvalue"/>
+                                <field name="meter_autoinc_lastvalue"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>
