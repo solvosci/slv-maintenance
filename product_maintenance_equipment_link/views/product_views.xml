@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.view (in product_maintenance_equipment_link)</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='inventory']" position="after">
+                <page string="Maintenance Data" name="maintenance_data">
+                    <group name="maintenance_data">
+                        <field name="maintenance_equipment_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="category_id"/>
+                                <field name="maintenance_team_id"/>
+                                <field name="technician_user_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
